@@ -1,0 +1,5 @@
+E:\Ucheba\Практика_EPAM\Task2_1\Task2_2BinaryTree\bin\Debug\Task2_2BinaryTree.exe.config
+E:\Ucheba\Практика_EPAM\Task2_1\Task2_2BinaryTree\bin\Debug\Task2_2BinaryTree.exe
+E:\Ucheba\Практика_EPAM\Task2_1\Task2_2BinaryTree\bin\Debug\Task2_2BinaryTree.pdb
+E:\Ucheba\Практика_EPAM\Task2_1\Task2_2BinaryTree\obj\Debug\Task2_2BinaryTree.exe
+E:\Ucheba\Практика_EPAM\Task2_1\Task2_2BinaryTree\obj\Debug\Task2_2BinaryTree.pdb
