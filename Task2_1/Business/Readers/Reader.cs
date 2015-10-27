@@ -10,17 +10,17 @@ namespace Task2_1
 {
     public class Reader : IFileReader
     {
-        private string fileName;
-        private string bufLine = string.Empty;
+        private string _fileName;
+        private string _bufLine = string.Empty;
 
         public Reader(string fName)
         {
-            this.fileName = fName;
+            this._fileName = fName;
         }
 
         public List<string> Read()
         {
-            FileStream stream = new FileStream(fileName, FileMode.Open);
+            FileStream stream = new FileStream(_fileName, FileMode.Open);
             StreamReader reader = new StreamReader(stream, Encoding.Default);
             List<string> result = new List<string>();
 
@@ -36,7 +36,7 @@ namespace Task2_1
 
         private List<string> SplitText(string line, bool isLastLine)
         {
-            line = string.Join(" ", bufLine, line);
+            line = string.Join(" ", _bufLine, line);
             int endOfSentence = 1;
             List<string> sentences = new List<string>();
             string remained = line;
@@ -66,7 +66,7 @@ namespace Task2_1
                 
                 sentences.Add(remained.Substring(0, endOfSentence + 1));
                 remained = remained.Substring(endOfSentence + 1);
-                bufLine = remained;
+                _bufLine = remained;
             }
 
             return sentences;
