@@ -47,7 +47,9 @@
     <Compile Include="Business\Workers\PunctuationMarkWorker.cs" />
     <Compile Include="Business\Workers\SentenceWorker.cs" />
     <Compile Include="Business\Workers\WordWorker.cs" />
+    <Compile Include="Interfaces\IPunctuationMarkWorker.cs" />
     <Compile Include="Interfaces\ISentence.cs" />
+    <Compile Include="Interfaces\IWordWorker.cs" />
     <Compile Include="Model\SentenceElement.cs" />
     <Compile Include="Model\Text.cs" />
     <Compile Include="Business\Parsers\TextParser.cs" />
