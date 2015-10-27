@@ -11,12 +11,12 @@ namespace Task2_1.Model
     {
         
         public string Value { get; set; }
-        public SentenceElementType seType { get; private set; } 
+        public SentenceElementType SEType { get; private set; } 
 
         public SentenceElement(string sentenceElementValue, SentenceElementType type)
         {
             this.Value = sentenceElementValue;
-            this.seType = type;
+            this.SEType = type;
         }
 
     }

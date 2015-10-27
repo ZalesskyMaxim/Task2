@@ -20,7 +20,7 @@ namespace Task2_1.Business.Workers
         public bool FirstLetterIsConsonant(SentenceElement element)
         {
             string pattern = @"[aeiou]";
-            if (element.seType == SentenceElementType.Word)
+            if (element.SEType == SentenceElementType.Word)
             {
                 if (!string.IsNullOrEmpty(element.Value) && !(Regex.Matches(element.Value[0].ToString(), pattern).Count > 0))
                 {
@@ -33,7 +33,7 @@ namespace Task2_1.Business.Workers
 
         public void ReplaceValue(int wordLenght, SentenceElement element, string newValue)
         {
-            if (element.seType == SentenceElementType.Word && GetWordLength(element) == wordLenght)
+            if (element.SEType == SentenceElementType.Word && GetWordLength(element) == wordLenght)
             {
                 element.Value = newValue;
             }

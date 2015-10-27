@@ -30,7 +30,7 @@ namespace Task2_1
             int count = 0;
             foreach (var sentenceElement in _sententenceElements)
             {
-                if (sentenceElement.seType == SentenceElementType.Word)
+                if (sentenceElement.SEType == SentenceElementType.Word)
                 {
                     count++;
                 }
@@ -57,7 +57,7 @@ namespace Task2_1
             builder.Append(_sententenceElements[0].Value);
             for (int i = 1; i < _sententenceElements.Count; i++)
             {
-                if (_sententenceElements[i].seType == SentenceElementType.Word)
+                if (_sententenceElements[i].SEType == SentenceElementType.Word)
                 {
                     builder.Append(" ");
                 }
@@ -73,7 +73,7 @@ namespace Task2_1
             //    && !_wordWorker.FirstLetterIsConsonant(x)).ToList();
             for (int i = 0; i < _sententenceElements.Count; i++)
             {
-                if (_sententenceElements[i].seType == SentenceElementType.Word
+                if (_sententenceElements[i].SEType == SentenceElementType.Word
                     && _wordWorker.GetWordLength(_sententenceElements[i]) == wordLenght
                     && _wordWorker.FirstLetterIsConsonant(_sententenceElements[i]))
                 {

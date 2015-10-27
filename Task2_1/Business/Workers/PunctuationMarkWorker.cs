@@ -12,7 +12,7 @@ namespace Task2_1.Business.Workers
     {
         public bool IsQuestionMark(SentenceElement element)
         {
-            if (element.seType == SentenceElementType.PunctuationMark)
+            if (element.SEType == SentenceElementType.PunctuationMark)
             {
                 if (element.Value.Equals("?"))
                 {

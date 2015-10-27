@@ -80,7 +80,7 @@ namespace Task2_1.Model
                 for (int i = 0; i < currentSentence.GetWordsCount(); i++)
                 {
                     var currentElement = currentSentence.GetElementByIndex(i);
-                    if (currentElement.seType == SentenceElementType.Word
+                    if (currentElement.SEType == SentenceElementType.Word
                         && _wordWorker.GetWordLength(currentElement) == wordLenght)
                     {
                         var str = currentElement.Value.ToUpper();
