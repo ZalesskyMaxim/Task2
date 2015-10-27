@@ -12,59 +12,38 @@ namespace Task2_1
 {
     class Program
     {
-        static WordWorker wordWorker = new WordWorker();
         static void Main(string[] args)
         {
+            string line = "=============================================================";
             IFileReader r = new Reader("input.txt");
             List<string> listSentences = new List<string>();
             IParser<Text> parser = new TextParser();
             listSentences = r.Read();
             var text = parser.Parse(listSentences);
-            text.SortSentences();
-            Console.WriteLine(text);
-            Console.WriteLine("=======================");
 
-            FindWordsOfPredeterminedLenght(text, 7);
-            Console.WriteLine("=======================");
+            ///1 Вывести все предложения заданного текста в порядке возрастания количества слов в каждом из них.
+            foreach (var item in text.SortSentences())
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(line);
 
+            ///2 Во всех вопросительных предложениях текста найти и напечатать без повторений слова заданной длины.
+            text.FindWordsOfPredeterminedLenght(text, 7);
+            Console.WriteLine(line);
+
+            ///3 Из текста удалить все слова заданной длины, начинающиеся на согласную букву.
             text.RemoveWords(7);
             Console.WriteLine(text);
-            Console.WriteLine("=======================");
+            Console.WriteLine(line);
 
-            text.ReplaceWords(0, 5, "qq");
+            ///4 В некотором предложении текста слова заданной длины заменить указанной подстрокой, 
+            ///длина которой может не совпадать с длиной слова.
+            text.ReplaceWords(0, 5, "Vasya");
             Console.WriteLine(text);
-            Console.WriteLine("=======================");
+            Console.WriteLine(line);
 
             Console.ReadKey();
         }
-
-        public static void FindWordsOfPredeterminedLenght(Text text, int wordLenght)
-        {
-            List<string> words = new List<string>();
-            foreach (var currentSentence in text.GetQuestionSentences())
-            {
-                for (int i = 0; i < currentSentence.GetWordsCount(); i++)
-                {
-                    var currentElement = currentSentence.GetElementByIndex(i);
-                    if (currentElement.seType == SentenceElementType.Word 
-                        && wordWorker.GetWordLength(currentElement) == wordLenght)
-                    {
-                        var str = currentElement.Value.ToUpper();
-                        if (!words.Contains(str))
-                        {
-                            words.Add(str);
-                        }
-                    }
-                }
-            }
-            foreach (var result in words)
-            {
-                Console.WriteLine(result);
-            }
-        }
-
-        
-
-
     }
 }
