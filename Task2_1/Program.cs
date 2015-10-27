@@ -47,7 +47,7 @@ namespace Task2_1
                 {
                     var currentElement = currentSentence.GetElementByIndex(i);
                     if (currentElement.seType == SentenceElementType.Word 
-                        && wordWorker.GetWordLenght(currentElement) == wordLenght)
+                        && wordWorker.GetWordLength(currentElement) == wordLenght)
                     {
                         var str = currentElement.Value.ToUpper();
                         if (!words.Contains(str))

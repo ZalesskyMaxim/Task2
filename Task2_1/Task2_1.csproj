@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Business\Readers\IFileReader.cs" />
     <Compile Include="Business\Parsers\IParser.cs" />
-    <Compile Include="Business\Workers\IWorker.cs" />
     <Compile Include="Business\Workers\PunctuationMarkWorker.cs" />
     <Compile Include="Business\Workers\SentenceWorker.cs" />
     <Compile Include="Business\Workers\WordWorker.cs" />

@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Task2_1.Interfaces;
 using Task2_1.Model;
 
 namespace Task2_1.Business.Workers
 {
-    public class WordWorker
+    public class WordWorker : IWordWorker
     {
 
-        public int GetWordLenght(SentenceElement element)
+        public int GetWordLength(SentenceElement element)
         { 
             return element.Value.Length;
         }
@@ -32,7 +33,7 @@ namespace Task2_1.Business.Workers
 
         public void ReplaceValue(int wordLenght, SentenceElement element, string newValue)
         {
-            if (element.seType == SentenceElementType.Word && GetWordLenght(element) == wordLenght)
+            if (element.seType == SentenceElementType.Word && GetWordLength(element) == wordLenght)
             {
                 element.Value = newValue;
             }

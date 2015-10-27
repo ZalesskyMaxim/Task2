@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task2_1.Interfaces;
 using Task2_1.Model;
 
 namespace Task2_1.Business.Workers
 {
-    public class PunctuationMarkWorker
+    public class PunctuationMarkWorker : IPunctuationMarkWorker
     {
         public bool IsQuestionMark(SentenceElement element)
         {
