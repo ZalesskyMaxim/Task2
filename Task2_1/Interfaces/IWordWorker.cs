@@ -9,8 +9,8 @@ namespace Task2_1.Interfaces
 {
     public interface IWordWorker
     {
-        int GetWordLength(SentenceElement element);
-        bool FirstLetterIsConsonant(SentenceElement element);
-        void ReplaceValue(int wordLenght, SentenceElement element, string newValue);
+        int GetWordLength(ISentenceElement element);
+        bool FirstLetterIsConsonant(ISentenceElement element);
+        void ReplaceValue(int wordLenght, ISentenceElement element, string newValue);
     }
 }

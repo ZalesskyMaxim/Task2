@@ -10,7 +10,7 @@ namespace Task2_1.Business.Workers
 {
     public class PunctuationMarkWorker : IPunctuationMarkWorker
     {
-        public bool IsQuestionMark(SentenceElement element)
+        public bool IsQuestionMark(ISentenceElement element)
         {
             if (element.SEType == SentenceElementType.PunctuationMark)
             {

@@ -12,12 +12,12 @@ namespace Task2_1.Business.Workers
     public class WordWorker : IWordWorker
     {
 
-        public int GetWordLength(SentenceElement element)
+        public int GetWordLength(ISentenceElement element)
         { 
             return element.Value.Length;
         }
 
-        public bool FirstLetterIsConsonant(SentenceElement element)
+        public bool FirstLetterIsConsonant(ISentenceElement element)
         {
             string pattern = @"[aeiou]";
             if (element.SEType == SentenceElementType.Word)
@@ -31,7 +31,7 @@ namespace Task2_1.Business.Workers
             else return false;
         }
 
-        public void ReplaceValue(int wordLenght, SentenceElement element, string newValue)
+        public void ReplaceValue(int wordLenght, ISentenceElement element, string newValue)
         {
             if (element.SEType == SentenceElementType.Word && GetWordLength(element) == wordLenght)
             {

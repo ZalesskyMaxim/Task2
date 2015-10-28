@@ -7,8 +7,9 @@ using Task2_1.Model;
 
 namespace Task2_1.Interfaces
 {
-    public interface IPunctuationMarkWorker
+    public interface ISentenceElement
     {
-        bool IsQuestionMark(ISentenceElement element);
+        string Value { get; set; }
+        SentenceElementType SEType { get; }
     }
 }

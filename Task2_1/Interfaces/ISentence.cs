@@ -9,10 +9,10 @@ namespace Task2_1.Interfaces
 {
     public interface ISentence
     {
-        void AddElementToEnd(SentenceElement element);
+        void AddElementToEnd(ISentenceElement element);
         int GetWordsCount();
         int GetElementsCount();
-        SentenceElement GetElementByIndex(int index);
+        ISentenceElement GetElementByIndex(int index);
         void DeleteWords(int wordLenght);
         void ReplaceWords(int wordLenght, string newValue);
     }

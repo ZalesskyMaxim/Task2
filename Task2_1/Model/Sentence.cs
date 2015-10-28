@@ -12,15 +12,15 @@ namespace Task2_1
     public class Sentence : ISentence
     {
 
-        private readonly List<SentenceElement> _sententenceElements;
+        private readonly List<ISentenceElement> _sententenceElements;
         private readonly IWordWorker _wordWorker;
         public Sentence()
         {
-            _sententenceElements = new List<SentenceElement>();
+            _sententenceElements = new List<ISentenceElement>();
             _wordWorker = new WordWorker();
         }
 
-        public void AddElementToEnd(SentenceElement element)
+        public void AddElementToEnd(ISentenceElement element)
         {
             _sententenceElements.Add(element);
         }
@@ -44,7 +44,7 @@ namespace Task2_1
         }
 
 
-        public SentenceElement GetElementByIndex(int index)
+        public ISentenceElement GetElementByIndex(int index)
         {
             if (index < 0 || index >= _sententenceElements.Count) return null;
             return _sententenceElements[index];

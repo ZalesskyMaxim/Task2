@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task2_1.Interfaces;
 
 namespace Task2_1.Model
 {
     public enum SentenceElementType { Word, PunctuationMark }
-    public class SentenceElement
+    public class SentenceElement : ISentenceElement
     {
         
         public string Value { get; set; }
