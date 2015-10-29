@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Task2_1.Enums;
 using Task2_1.Interfaces;
 using Task2_1.Model;
 
@@ -20,7 +21,7 @@ namespace Task2_1.Business.Workers
         public bool FirstLetterIsConsonant(ISentenceElement element)
         {
             string pattern = @"[aeiou]";
-            if (element.SEType == SentenceElementType.Word)
+            if (element.SentenceElementType == SentenceElementType.Word)
             {
                 if (!string.IsNullOrEmpty(element.Value) && !(Regex.Matches(element.Value[0].ToString(), pattern).Count > 0))
                 {
@@ -33,7 +34,7 @@ namespace Task2_1.Business.Workers
 
         public void ReplaceValue(int wordLenght, ISentenceElement element, string newValue)
         {
-            if (element.SEType == SentenceElementType.Word && GetWordLength(element) == wordLenght)
+            if (element.SentenceElementType == SentenceElementType.Word && GetWordLength(element) == wordLenght)
             {
                 element.Value = newValue;
             }

@@ -10,17 +10,17 @@ namespace Task2_2BinaryTree
 {
     public class Reader : IReader
     {
-        private string fileName;
-        private string bufLine = string.Empty;
+        private string _fileName;
+        private string _bufLine = string.Empty;
 
         public Reader(string fName)
         {
-            this.fileName = fName;
+            this._fileName = fName;
         }
 
         public List<string> Read()
         {
-            FileStream stream = new FileStream(fileName, FileMode.Open);
+            FileStream stream = new FileStream(_fileName, FileMode.Open);
             StreamReader reader = new StreamReader(stream, Encoding.Default);
             List<string> result = new List<string>();
 

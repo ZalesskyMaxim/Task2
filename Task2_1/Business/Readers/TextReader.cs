@@ -8,12 +8,12 @@ using Task2_1.Business;
 
 namespace Task2_1
 {
-    public class Reader : IFileReader
+    public class TextReader : IFileReader
     {
         private string _fileName;
         private string _bufLine = string.Empty;
 
-        public Reader(string fName)
+        public TextReader(string fName)
         {
             this._fileName = fName;
         }

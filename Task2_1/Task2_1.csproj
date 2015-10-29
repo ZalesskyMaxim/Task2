@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Readers\IFileReader.cs" />
-    <Compile Include="Business\Parsers\IParser.cs" />
+    <Compile Include="Enums\SentenceElementType.cs" />
+    <Compile Include="Interfaces\IFileReader.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Business\Workers\PunctuationMarkWorker.cs" />
     <Compile Include="Business\Workers\SentenceWorker.cs" />
     <Compile Include="Business\Workers\WordWorker.cs" />
@@ -55,11 +56,14 @@
     <Compile Include="Business\Parsers\TextParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Business\Readers\Reader.cs" />
+    <Compile Include="Business\Readers\TextReader.cs" />
     <Compile Include="Model\Sentence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

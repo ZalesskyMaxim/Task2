@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Task2_1.Business.Workers;
+using Task2_1.Enums;
 using Task2_1.Interfaces;
 
 namespace Task2_1.Model
@@ -20,7 +21,7 @@ namespace Task2_1.Model
             _punctuationMarkWorker = new PunctuationMarkWorker();
         }
 
-        public void AddSentence(Sentence sentence)
+        public void AddSentence(ISentence sentence)
         {
             _sentences.Add(sentence);
         }
@@ -80,7 +81,7 @@ namespace Task2_1.Model
                 for (int i = 0; i < currentSentence.GetWordsCount(); i++)
                 {
                     var currentElement = currentSentence.GetElementByIndex(i);
-                    if (currentElement.SEType == SentenceElementType.Word
+                    if (currentElement.SentenceElementType == SentenceElementType.Word
                         && _wordWorker.GetWordLength(currentElement) == wordLenght)
                     {
                         var str = currentElement.Value.ToUpper();

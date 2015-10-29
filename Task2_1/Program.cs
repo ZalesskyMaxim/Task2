@@ -15,7 +15,7 @@ namespace Task2_1
         static void Main(string[] args)
         {
             string line = "=============================================================";
-            IFileReader r = new Reader("input.txt");
+            IFileReader r = new TextReader("input.txt");
             List<string> listSentences = new List<string>();
             IParser<Text> parser = new TextParser();
             listSentences = r.Read();

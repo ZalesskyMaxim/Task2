@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Task2_1.Business;
 using Task2_1.Business.Workers;
+using Task2_1.Enums;
 using Task2_1.Interfaces;
 using Task2_1.Model;
 

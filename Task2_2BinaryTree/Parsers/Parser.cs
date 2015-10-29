@@ -13,19 +13,19 @@ namespace Task2_2BinaryTree.Parsers
         {
             var res = new Dictionary<string, Word>();
             var iLine = 0;
+            Word word;
             foreach (var line in text)
             {
                 iLine++;
-                foreach (Match m in Regex.Matches(line, @"\w+"))
+                foreach (Match match in Regex.Matches(line, @"\w+"))
                 {
-                    var word = m.Value;
-                    Word w;
-                    if (!res.TryGetValue(word, out w))
-                        w = res[word] = new Word(word);
-                    w.AddLine(iLine);
+                    var wordKey = match.Value;
+
+                    if (!res.TryGetValue(wordKey, out word))
+                        word = res[wordKey] = new Word(wordKey);
+                    word.AddLine(iLine);
                 }
             }
-
             return res;
         }
     }
